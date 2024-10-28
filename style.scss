@@ -1,0 +1,69 @@
+@import "config";
+@import "utilities";
+@import "buttons";
+@import "media";
+// we have to add semicolon after each variable in order everything after is working
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: $light-color;
+  font-family: "Courier New", Courier, monospace;
+  line-height: 1.6;
+}
+.showcase {
+  @include set-background($primary-color);
+  height: 600px;
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    ul {
+      display: flex;
+      list-style-type: none;
+      li {
+        padding: 15px;
+      }
+      a {
+        color: set-text-color($secondery-color);
+      }
+      a:hover {
+        color: $secondery-color;
+      }
+    }
+  }
+  // a {
+  //   color: white;
+  // }
+  &-content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 50%;
+    }
+    h1 {
+      font-size: 50px;
+      line-height: 1.2;
+    }
+
+    a {
+      color: set-text-color($primary-color);
+    }
+  }
+}
+a {
+  text-decoration: none;
+}
+.container {
+  max-width: 1100px;
+  padding: 0 30px;
+  margin: 0 auto;
+  overflow: auto;
+}
+img {
+  width: 100%;
+}
